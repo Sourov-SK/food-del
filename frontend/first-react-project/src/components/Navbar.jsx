@@ -6,6 +6,7 @@ import { StoreContext } from '../context/StoreContext';
 
 const Navbar = ({setShowLogin}) => {
 
+  const SRS = "https://docs.google.com/document/d/1szPwry8dX5JbDj8dVtLyl05x50F-nwWQM-Y2I8hJj90/edit?usp=sharing";
   const [menu,setMenu] =  useState("home");
 
   const {getTotalCartAmount,token,setToken} = useContext(StoreContext);
@@ -28,6 +29,7 @@ const Navbar = ({setShowLogin}) => {
         <a href='#explore-menu' onClick={()=>setMenu("menu")} className={menu==="menu"?"active":""}>Menu</a>
         <a href='#app-download' onClick={()=>setMenu("mobile-app")} className={menu==="mobile-app"?"active":""}>Mobile-app</a>
         <a href='#footer' onClick={()=>setMenu("contact-us")} className={menu==="contact-us"?"active":""}>Contact us</a>
+        <a href={SRS} className='srs-link'>SRS</a>
       </ul>
       <div className="navbar-right">
         
